@@ -47,7 +47,7 @@ function exercise3(nums) {
     for (var i = 0; i < nums.length; i++) {
         x = nums[i] % 2;
 
-        if (x == 0) {
+        if (x === 0) {
             evenNum = true;
             break;
         }
@@ -60,13 +60,13 @@ document.getElementById("exercise3").innerHTML = "Does the array contain even nu
 
 //4. 
 function exercise4(nums) {
-    evenNums = true;
+    var  evenNums = true;
     var x = 0;
 
     for (var i = 0; i < nums.length; i++) {
         x = nums[i] % 2;
 
-        if (x != 0) {
+        if (x !== 0) {
             evenNums = false;
         }
     }
@@ -158,7 +158,7 @@ document.getElementById("exercise9").innerHTML = "The largest number(underscore.
 //10.
 function exercise3UnderscoreJS(nums) {
 
-	var evenNum = _.find(nums, function(num){ return num % 2 == 0 ? true : false});
+	var evenNum = _.find(nums, function(num){ return num % 2 === 0 ? true : false;});
 	return evenNum;
 }
 var e = exercise3UnderscoreJS([1,2,3,4]);  //4
@@ -166,7 +166,7 @@ document.getElementById("exercise10").innerHTML = "The array contains at least o
 
 //11.
 function exercise4UnderscoreJS(nums) {
-    var evenNums = _.every(nums, function(num){return num % 2 == 0 ? true : false});
+    var evenNums = _.every(nums, function(num){return num % 2 === 0 ? true : false;});
     return evenNums;
 }
 var e = exercise4UnderscoreJS([2,4,6,8]);
